@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Libro de Contabilidad</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+<h2>Libro</h2>
+
+<input type="text" id="desc" placeholder="Descripción">
+
+<select id="type">
+<option value="income">Ingreso</option>
+<option value="expense">Gasto</option>
+</select>
+
+<input type="number" id="amount" placeholder="Cantidad">
+
+<button onclick="addTransaction()">Agregar</button>
+
+<table>
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Cantidad</th>
+</tr>
+</thead>
+<tbody id="ledgerTable"></tbody>
+</table>
+
+<div class="balance-box">
+Saldo Total: ₱<span id="balance">0</span>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

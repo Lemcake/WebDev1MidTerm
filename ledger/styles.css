@@ -1,0 +1,97 @@
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a7a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    background:#ffffff;
+    padding:25px;
+    border-radius:15px;
+    width:420px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#333;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+input:focus, select:focus{
+    outline:none;
+    border-color:#4a90e2;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border:none;
+    border-radius:8px;
+    background:#4a90e2;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#357bd8;
+}
+
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+th, td{
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#4a90e2;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f5f7fa;
+}
+
+.income{
+    color:#2ecc71;
+    font-weight:bold;
+}
+
+.expense{
+    color:#e74c3c;
+    font-weight:bold;
+}
+
+.balance-box{
+    margin-top:15px;
+    padding:12px;
+    background:#f0f3ff;
+    border-radius:10px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+}
