@@ -1,0 +1,14 @@
+body { font-family: 'Trebuchet MS'; background:#ffe; color:#333; margin:0; }
+header { background:#ff6f61; color:white; padding:15px; text-align:center; }
+nav a { color:white; margin:0 10px; text-decoration:none; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+
+.menu-container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px; }
+.dish { background:#fff3f2; border-radius:12px; width:250px; text-align:center; padding:15px; transition:0.3s; }
+.dish:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+
+.dish img { width:100%; border-radius:10px; }
+.dish h3 { margin:10px 0 5px 0; color:#ff6f61; }
+.dish p { margin:0; font-weight:bold; }
+
+footer { text-align:center; padding:15px; background:#ff6f61; color:white; }

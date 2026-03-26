@@ -1,0 +1,13 @@
+body { font-family:'Trebuchet MS'; background:linear-gradient(to right,#ffecd2,#fcb69f); margin:0; }
+header { text-align:center; padding:15px; background:#ff6f61; color:white; }
+nav a { color:white; margin:0 10px; text-decoration:none; }
+nav a:hover { text-decoration:underline; }
+
+.form-container { display:flex; justify-content:center; padding:30px; }
+form { background:white; padding:25px; border-radius:15px; width:300px; box-shadow:0 10px 20px rgba(0,0,0,0.3); }
+label { display:block; margin-top:10px; font-weight:bold; }
+input, button { width:100%; padding:10px; margin-top:5px; border-radius:8px; border:1px solid #ccc; }
+button { background:#ff6f61; color:white; font-weight:bold; border:none; margin-top:15px; cursor:pointer; transition:0.3s; }
+button:hover { background:#e55b50; }
+
+footer { text-align:center; padding:15px; background:#ff6f61; color:white; }
