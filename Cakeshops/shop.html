@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Velvet Crust Cakes | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Velvet Crust</div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="shop.html" class="nav-btn">Shop</a>
+      <a href="summary.html" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="nav-btn login-btn">Login</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Our Full Collection</h2>
+      <div class="grid" id="full-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    window.onload = () => {
+      renderFullShop();
+    };
+
+    function renderFullShop() {
+      const grid = document.getElementById("full-grid");
+      grid.innerHTML = "";
+      cakeData.forEach(cake => {
+        grid.innerHTML += `
+          <div class="cake-card">
+            <img src="${cake.img}" alt="${cake.name}" />
+            <h3>${cake.name}</h3>
+            <p>${cake.desc}</p>
+            <strong>$${cake.price}</strong>
+            <button onclick="openCartModal('${cake.name}')">Add to Cart</button>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>

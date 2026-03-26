@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Velvet Crust Cakes | Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Velvet Crust</div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="shop.html" class="nav-btn">Shop</a>
+      <a href="summary.html" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="nav-btn login-btn">Login</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Your Cart</h2>
+      <table style="width:100%; border-collapse: collapse;">
+        <thead style="border-bottom: 1px solid var(--glass-border);">
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+
+      <div style="text-align:right; margin-top: 2rem;">
+        <h3>Total: $<span id="total-price">0</span></h3>
+        <button class="btn-cream" onclick="alert('Proceeding to payment...')">Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    window.onload = () => {
+      renderCartTable();
+    };
+
+    function renderCartTable() {
+      const table = document.getElementById("cart-items");
+      table.innerHTML = "";
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        table.innerHTML += `
+          <tr style="border-bottom:1px solid var(--glass-border);">
+            <td>${item.name}</td>
+            <td>${item.qty}</td>
+            <td>$${item.price * item.qty}</td>
+            <td><button onclick="removeFromCart(${item.id})" style="border:none; background:none; cursor:pointer;">❌</button></td>
+          </tr>
+        `;
+      });
+      document.getElementById("total-price").textContent = total;
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      updateCartCount();
+      renderCartTable();
+    }
+  </script>
+</body>
+</html>

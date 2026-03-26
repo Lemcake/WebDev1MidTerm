@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Velvet Crust Cakes | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Velvet Crust</div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="shop.html" class="nav-btn">Shop</a>
+      <a href="summary.html" class="nav-btn">Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="nav-btn login-btn">Login</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="carousel-section">
+      <img id="carousel-img" class="carousel-img" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200" alt="Banner" />
+      <div class="carousel-overlay">
+        <h1>Artisan Crusts, Velvety Centers</h1>
+        <p>Experience the finest handcrafted cakes delivered to your door.</p>
+        <button class="btn-cream" onclick="location.href='shop.html'">Browse the Shop</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Trending Cakes</h2>
+      <div class="grid" id="trending-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

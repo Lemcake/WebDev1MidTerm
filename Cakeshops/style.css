@@ -1,0 +1,223 @@
+:root {
+  --cream: #f7f1e1;
+  --cream-transparent: rgba(247, 241, 225, 0.8);
+  --brown-light: #8b6d5c;
+  --brown-dark: #5a4432;
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --text-color: #4a3c2b;
+  --btn-hover: #d9c7af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e7d9c8 0%, #c9b69a 100%);
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--cream-transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--brown-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  color: var(--brown-dark);
+  border: 1.5px solid transparent;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background: var(--cream-transparent);
+}
+
+.nav-btn:hover {
+  background: var(--btn-hover);
+  border-color: var(--brown-dark);
+  cursor: pointer;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1.5px solid var(--brown-dark);
+  color: var(--brown-dark);
+}
+
+.login-btn:hover {
+  background: var(--brown-dark);
+  color: var(--cream);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto 5rem;
+  padding: 0 1rem;
+}
+
+/* Carousel section */
+
+.carousel-section {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: var(--cream-transparent);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  max-width: 400px;
+  color: var(--brown-dark);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.carousel-overlay h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.carousel-overlay p {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.btn-cream {
+  background: var(--brown-dark);
+  color: var(--cream);
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cream:hover {
+  background: var(--btn-hover);
+  color: var(--brown-dark);
+}
+
+/* Grid and Cards */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.cake-card {
+  background: var(--cream-transparent);
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--glass-border);
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.cake-card img {
+  border-radius: 18px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+}
+
+.cake-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--brown-dark);
+}
+
+.cake-card p {
+  font-size: 0.9rem;
+  color: var(--brown-light);
+  margin-bottom: 0.6rem;
+  min-height: 48px;
+}
+
+.cake-card strong {
+  color: var(--brown-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.cake-card button {
+  background: var(--brown-dark);
+  color: var(--cream);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.cake-card button:hover {
+  background: var(--btn-hover);
+  color: var(--brown-dark);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .carousel-overlay {
+    max-width: 90%;
+    padding: 1.5rem 2rem;
+  }
+  .carousel-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .cake-card img {
+    height: 140px;
+  }
+}
