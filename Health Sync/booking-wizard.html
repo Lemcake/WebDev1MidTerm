@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Nature Health</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <main class="wizard-container">
+    <header>
+      <h1>Nature Health Booking Wizard 🌱</h1>
+    </header>
+
+    <section class="wizard-step">
+      <p id="stepLabel"></p>
+      <h2 id="wizardQuestion"></h2>
+      <p id="stepSubtitle"></p>
+      <div id="wizardScreen"></div>
+      <div class="wizard-controls">
+        <button id="backButton">Back</button>
+        <button id="nextButton">Continue</button>
+        <button id="resetWizard">Reset</button>
+      </div>
+      <p id="resumeNotice"></p>
+    </section>
+
+    <aside class="wizard-summary">
+      <h3>Summary</h3>
+      <p><strong>Specialty:</strong> <span id="summarySpecialty"></span></p>
+      <p><strong>Doctor:</strong> <span id="summaryDoctor"></span></p>
+      <p><strong>Date:</strong> <span id="summaryDate"></span></p>
+      <p><strong>Time:</strong> <span id="summaryTime"></span></p>
+    </aside>
+  </main>
+
+  <script src="wizard.js"></script>
+</body>
+</html>

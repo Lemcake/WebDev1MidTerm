@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Nature Health</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <main style="padding:2rem; max-width:400px; margin:auto;">
+    <h2>Login to Nature Health 🌱</h2>
+    <form id="loginForm">
+      <label>Username<input type="text" name="username" required></label>
+      <label>Password<input type="password" name="password" required></label>
+      <button type="submit">Login</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", e => {
+      e.preventDefault();
+      window.location.href = "natural-user-dashboard.html";
+    });
+  </script>
+</body>
+</html>
